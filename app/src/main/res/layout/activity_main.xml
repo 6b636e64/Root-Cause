@@ -12,15 +12,19 @@
         android:layout_width="191dp"
         android:layout_height="47dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
         android:background="#32CD32"
         android:onClick="TrackTripScreen"
         android:text="TRACK YOUR TRIP"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/button_past"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="265dp" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.6" />
 
     <Button
         android:id="@+id/button_past"
@@ -42,9 +46,11 @@
         android:id="@+id/button_settings"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="191dp"
-        android:layout_height="0dp"
+        android:layout_height="47dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="70dp"
         android:background="#32CD32"
         android:onClick="SettingsScreen"
         android:text="SETTINGS"
@@ -52,7 +58,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_past" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -65,8 +72,15 @@
         android:id="@+id/imageView"
         android:layout_width="185dp"
         android:layout_height="239dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="103dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="tree"
+        app:layout_constraintBottom_toTopOf="@+id/button_track"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 </android.support.constraint.ConstraintLayout>
